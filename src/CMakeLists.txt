@@ -5,7 +5,7 @@
 INCLUDE(${CMAKE_CURRENT_SOURCE_DIR}/source-files.cmake)
 
 ADD_LIBRARY(asterisk-chan-quectel SHARED ${SOURCES} ${HEADERS})
-TARGET_COMPILE_FEATURES(asterisk-chan-quectel PUBLIC c_std_99)
+TARGET_COMPILE_FEATURES(asterisk-chan-quectel PUBLIC c_std_17)
 
 TARGET_INCLUDE_DIRECTORIES(asterisk-chan-quectel BEFORE PRIVATE ${CMAKE_BINARY_DIR}/include)
 
