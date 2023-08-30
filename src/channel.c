@@ -652,7 +652,7 @@ static struct ast_frame* channel_read_tty(struct cpvt* cpvt, struct pvt* pvt, si
     return f;
 }
 
-static void _show_alsa_state(int, const char* file, int line, const char* function, const char* const pcm_desc, struct pvt* const pvt, snd_pcm_t* const pcm)
+static void _show_alsa_state(int a, const char* file, int line, const char* function, const char* const pcm_desc, struct pvt* const pvt, snd_pcm_t* const pcm)
 {
     const size_t ss                    = snd_pcm_status_sizeof();
     snd_pcm_status_t* const pcm_status = (snd_pcm_status_t*)ast_alloca(ss);
@@ -911,7 +911,7 @@ static int channel_write_tty(struct ast_channel* channel, struct ast_frame* f, s
     return 0;
 }
 
-static int channel_write_uac(struct ast_channel*, struct ast_frame* f, struct cpvt*, struct pvt* pvt, size_t frame_size)
+static int channel_write_uac(struct ast_channel* a, struct ast_frame* f, struct cpvt* b, struct pvt* pvt, size_t frame_size)
 {
     const int samples = f->samples;
     int res           = 0;

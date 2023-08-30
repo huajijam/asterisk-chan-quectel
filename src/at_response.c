@@ -109,7 +109,7 @@ static void request_clcc(struct pvt* pvt)
     }
 }
 
-static int at_response_cmgs_error(struct pvt*, const at_queue_task_t* const);
+static int at_response_cmgs_error(struct pvt* pvt, const at_queue_task_t* const);
 
 #ifdef HANDLE_RCEND
 static int at_response_rcend(struct pvt* pvt)
@@ -2558,7 +2558,7 @@ static void at_response_ctxvol(struct pvt* const pvt, const struct ast_str* cons
     ast_free(sgain);
 }
 
-static int at_response_csms(struct pvt*, const struct ast_str* const)
+static int at_response_csms(struct pvt* const pvt, const struct ast_str* const response)
 {
     // nothing to do?
     return 0;
